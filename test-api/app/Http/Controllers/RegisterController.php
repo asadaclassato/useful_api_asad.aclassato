@@ -24,9 +24,6 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // Créez un token pour l'utilisateur
-      
-
         return response()->json([
             'message' => 'Utilisateur créé avec succès',
             'user' => $user,

@@ -18,9 +18,17 @@ class ModulesController extends Controller
             'module' => $module
           
         ]);
-        $modules = Module::FindOrFail($id);
 
     }
+
+public function show($id)
+{
+    $element = Module::findOrFail($id); 
+     return response()->json([
+        'element' => $element
+     ]);
+}
+
     
 
     /**
@@ -42,10 +50,7 @@ class ModulesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Module $module)
-    {
-        //
-    }
+    
 
     /**
      * Show the form for editing the specified resource.

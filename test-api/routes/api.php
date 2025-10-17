@@ -21,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('/modules', [ModulesController::class, 'index']);
 
-Route::get('/modules/{id}', [ModulesController::class, 'index']);
+Route::get('/modules/{id}', [ModulesController::class, 'show']);
