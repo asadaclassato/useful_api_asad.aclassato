@@ -77,8 +77,9 @@ export const useAuthStore = defineStore('auth', {
                 password: this.password,
             }
             const url = import.meta.env.VITE_API_BASE_URL
+            const newUrl = url.slice(0, -4)
             try {
-                await axios.get(url + '/sanctum/csrf-cookie', { withCredentials: true }).then(async (response) => {
+                await axios.get(newUrl + '/sanctum/csrf-cookie', { withCredentials: true }).then(async (response) => {
                     try {
                         let response = await apiClient.post("/register", data);
 //                         console.log(response);

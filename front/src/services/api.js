@@ -6,7 +6,7 @@ import { useToast } from "vue-toastification";
 const toast = useToast();
 
 const apiClient = axios.create({
-    baseURL: import.meta.env.VITE_API_BASE_URL+ "/api",
+    baseURL: import.meta.env.VITE_API_BASE_URL,
     withCredentials: true,
     withXSRFToken: true,
     headers: {
